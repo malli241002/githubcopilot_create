@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eco Rides</title>
+    <style>
+        body {
+            background-image: url('ride-image.jpg');
+            background-size: cover;
+        }
+        .header, .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .login-form {
+            width: 300px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Eco Rides</h1>
+    </div>
+
+    <div class="login-form">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+        </form>
+        <button id="signupBtn">Sign Up</button>
+    </div>
+
+    <div class="footer">
+        <p>© 2022 Eco Rides</p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            console.log('Username: ' + username + ', Password: ' + password);
+        });
+
+        document.getElementById('signupBtn').addEventListener('click', function() {
+            console.log('Sign Up button clicked');
+        });
+    </script>
+</body>
+</html>
